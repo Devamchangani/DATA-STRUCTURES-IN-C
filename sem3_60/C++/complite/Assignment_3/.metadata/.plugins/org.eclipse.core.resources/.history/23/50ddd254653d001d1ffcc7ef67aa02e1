@@ -1,0 +1,182 @@
+/*
+ * q33.cpp
+ *
+ *  Created on: 29-Aug-2022
+ *      Author: root
+ */
+
+#include<iostream>
+
+using namespace std;
+
+class datee
+{
+public:
+	int bd,bm,by;	//birthdate
+	int dj,mj,yj;	//date of joining
+	int cd,cm,cy;	//current date
+	int dd,dm,dy;
+	int ed,em,ey;
+	int month[12]={31,28,31,30,31,30,31,31,30,31,30,31};	//days in month
+
+	datee()
+	{
+		bd=;
+		bm=;
+		by=;
+
+		dj=;
+		mj=;
+		yj=;
+
+		cd=26;
+		cm=09;
+		cy=2022;
+	}
+
+	void count_exp()
+	{
+		if((cy%4==0 && cy%100!= 0) || cy%400==0)	//checking for leap year
+		{
+			month[1]=29;
+		}
+
+		if(dj>cd)		//for diff of date
+		{
+			cd=cd+month[mj];
+			dm=cm-1;
+		}
+		ed=cd-dj;
+
+		if(mj>cm)	//for diff of month
+		{
+			cm=cm+1;
+			cy=cy-1;
+		}
+		em=cm-mj;
+		ey=cy-yj;	//for diff of year
+	}
+
+	void count_age()
+	{
+		if((cy%4==0 && cy%100!= 0) || cy%400==0)	//checking for leap year
+		{
+			month[1]=29;
+		}
+
+		if(bd>cd)		//for diff of date
+		{
+			cd=cd+month[mj];
+			cm=cm-1;
+		}
+		dd=cd-bd;
+
+		if(bm>cm)	//for diff of month
+		{
+			cm=cm+1;
+			cy=cy-1;
+		}
+		dm=cm-bm;
+		dy=cy-by;	//for diff of year
+	}
+
+};
+
+class person
+{
+public:
+	char name[15];
+
+	char gender[6];
+	char email[25];
+	int phone_no;
+
+	person()
+	{
+		printf("\n > Enter the details : ");
+		printf("\n \t Name - ");
+		scanf("%s",name);
+		printf("\n \t Gender - ");
+		scanf("%s",gender);
+		printf("\n \t Email - ");
+		scanf("%s",email);
+		printf("\n \t Phone no - ");
+		scanf("%d",&phone_no);
+
+	};
+
+//	void display_person()
+//	{
+//		printf("\n > Details of person : ");
+//
+//	}
+};
+
+class employee:public person,public datee
+{
+public:
+
+	int empid;
+	float salary;
+	char designation[20];
+	int d,m,y,dd,mm,yy;
+
+	//employee(){};
+
+	employee()
+	{
+		printf("\n \t Employee Id - ");
+		scanf("%d",&empid);
+		printf("\n \t Birthdate - ");
+		scanf("%d/%d/%d",&dd,&mm,&yy);
+		printf("\n \t Date of joining - ");
+		scanf("%d/%d/%d",&d,&m,&y);
+		printf("\n \t Salary - ");
+		scanf("%f",&salary);
+		printf("\n \t Designation - ");
+		scanf("%s",designation);
+
+	};
+
+	void display_emp()
+	{
+		count_age();
+		count_exp();
+
+		printf("\n > Employee Details : \n\n");
+
+		printf("\n \t Emplyee_Id : %d ",empid);
+		printf("\n \t Name : %s ",name);
+		printf("\n \t Birthdate : %d / %d /%d ",bd,bm,by);
+		printf("\n \t Gender : %s ",gender);
+		printf("\n \t Designation : %s ",designation);
+		printf("\n \t Email : %s ",email);
+		printf("\n \t Phone No : %d ",phone_no);
+		printf("\n \t Salary : %f ",salary);
+		printf("\n \t Age : %d days, %d months, %d years",dd,dm,dy);
+		printf("\n \t Experience with this org : %d ",ey);
+
+	}
+};
+
+int main()
+{
+	int size,eid,flag=0;
+
+
+	printf("\n > Enter the number of employees : ");
+	scanf("%d",&size);
+	employee e[size];
+
+
+	for(int i=0;i<size;i++)
+	{
+		e[i].display_emp();
+	}
+
+
+
+	return 0;
+}
+
+

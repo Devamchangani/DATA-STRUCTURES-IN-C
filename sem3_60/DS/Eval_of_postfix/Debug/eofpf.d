@@ -1,0 +1,1 @@
+eofpf.o: ../eofpf.c

@@ -1,0 +1,15 @@
+16:35:01 **** Build of configuration Debug for project circuler_LL ****
+make all 
+Building file: ../cll.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"cll.d" -MT"cll.o" -o "cll.o" "../cll.c"
+Finished building: ../cll.c
+ 
+Building target: circuler_LL
+Invoking: GCC C Linker
+gcc  -o "circuler_LL"  ./cll.o   
+Finished building target: circuler_LL
+ 
+
+16:35:01 Build Finished. 0 errors, 0 warnings. (took 160ms)
+

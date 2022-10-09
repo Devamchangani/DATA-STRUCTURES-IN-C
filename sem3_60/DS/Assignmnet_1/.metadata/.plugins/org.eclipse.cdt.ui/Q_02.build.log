@@ -1,0 +1,47 @@
+13:49:28 **** Build of configuration Debug for project Q_02 ****
+make all 
+Building file: ../q2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"q2.d" -MT"q2.o" -o "q2.o" "../q2.c"
+../q2.c: In function ‘main’:
+../q2.c:22:29: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+   22 |  printf("\n > value at a : %d ",a);
+      |                            ~^   ~
+      |                             |   |
+      |                             int int *
+      |                            %ls
+../q2.c:23:30: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘int (*)[10]’ [-Wformat=]
+   23 |  printf("\n > Value at &a : %u ",&a);
+      |                             ~^   ~~
+      |                              |   |
+      |                              |   int (*)[10]
+      |                              unsigned int
+../q2.c:24:30: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘int **’ [-Wformat=]
+   24 |  printf("\n > Value at &p : %u ",&p);
+      |                             ~^   ~~
+      |                              |   |
+      |                              |   int **
+      |                              unsigned int
+../q2.c:25:29: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+   25 |  printf("\n > Value at p : %d ",p);
+      |                            ~^   ~
+      |                             |   |
+      |                             int int *
+      |                            %ls
+../q2.c:26:31: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘int *’ [-Wformat=]
+   26 |  printf("\n > Value at p++ : %u ",p++);
+      |                              ~^   ~~~
+      |                               |    |
+      |                               |    int *
+      |                               unsigned int
+      |                              %ls
+Finished building: ../q2.c
+ 
+Building target: Q_02
+Invoking: GCC C Linker
+gcc  -o "Q_02"  ./q2.o   
+Finished building target: Q_02
+ 
+
+13:49:28 Build Finished. 0 errors, 5 warnings. (took 162ms)
+

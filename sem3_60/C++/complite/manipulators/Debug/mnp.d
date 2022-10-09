@@ -1,0 +1,1 @@
+mnp.o: ../mnp.cpp

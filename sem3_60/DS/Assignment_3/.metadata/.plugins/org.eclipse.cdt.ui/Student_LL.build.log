@@ -1,0 +1,15 @@
+11:10:00 **** Incremental Build of configuration Debug for project Student_LL ****
+make all 
+Building file: ../sll.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"sll.d" -MT"sll.o" -o "sll.o" "../sll.c"
+Finished building: ../sll.c
+ 
+Building target: Student_LL
+Invoking: GCC C Linker
+gcc  -o "Student_LL"  ./sll.o   
+Finished building target: Student_LL
+ 
+
+11:10:00 Build Finished. 0 errors, 0 warnings. (took 212ms)
+

@@ -1,0 +1,64 @@
+/*
+ * A2.cpp
+ *
+ *  Created on: 24-Aug-2022
+ *      Author: root
+ */
+#include <iostream>
+using namespace std;
+
+class patient
+{
+	char name[30];
+	int age;
+	char gender[10];
+	int contact_no ;
+
+public:
+	void insert()
+	{
+		cout<<"\nPatient Details: \n ";
+		cout<<"Enter Patient's Name: "<<endl;
+		cin>>name;
+		cout<<"Enter Patient's Age: "<<endl;
+		cin>>age;
+		cout<<"Enter Patient's gender: "<<endl;
+		cin>>gender;
+		cout<<"Enter Patient's Phone Number: "<<endl;
+		cin>>contact_no;
+	}
+	void display()
+	{
+		cout<<"Patient's Name: "<<name<<endl;
+		cout<<"Patient's Age: "<<age<<endl;
+		cout<<"Patient's gender: "<<gender<<endl;
+		cout<<"Patient's Contact No.: "<<contact_no<<endl;
+	}
+
+};
+class IPD
+{
+	int ward_no, bed_no, charge_per_day;
+public:
+	void insert()
+	{
+		cout<<"IPD:==========";
+		cout<<"Enter Ward no.: ";
+		cin>>ward_no;
+		cout<<"Enter Bed no.: ";
+		cin>>bed_no;
+		cout<<"Charge per day: ";
+		cin>>charge_per_day;
+	}
+
+	void display()
+	{
+		cout<<"IPD DETAILS:\n\n";
+		cout<<"ward no.: "<<ward_no;
+		cout<<"bed no.: "<<ward_no;
+		cout<<"Charge: "<<ward_no;
+
+	}
+};
+
+

@@ -1,0 +1,197 @@
+/*
+ * sll.c
+ *
+ *  Created on: 20-Sep-2022
+ *      Author: root
+ */
+
+/*
+ * ll.c
+ *
+ *  Created on: 03-Sep-2022
+ *      Author: root
+ */
+
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node{
+	int rno;
+	char name[20];
+	int marks;
+	char div[2];
+	struct node *next;
+}*first,*last,*nn,*temp,*curr,*prev;
+
+int x,ch;
+
+void create()
+{
+	x=0;
+
+	printf("\n > Enter roll no (-1 for end) : ");
+	scanf("%d",&x);
+	while(x != -1)
+	{
+		nn = (struct node *) malloc (sizeof(struct node));
+
+		printf("\n > Enter name : ");
+		scanf("%s",nn->name);
+		printf("\n > Enter Division : ");
+		scanf("%s",nn->div);
+		printf("\n > Enter Marks : ");
+		scanf("%d",&nn->marks);
+
+		nn->rno=x;
+		nn->next=NULL;
+
+		if(first==NULL)
+		{
+			first=nn;
+			last=nn;
+		}
+		else
+		{
+			last->next=nn;
+			last=nn;
+		}
+
+		printf("\n > Enter Roll No (-1 for end) : ");
+		scanf("%d",&x);
+	}
+}
+
+void display()
+{
+	if(first==NULL)
+	{
+		printf("\n > Link list is empty.");
+		return;
+	}
+	else
+	{
+		temp=first;
+		while(temp!=NULL)
+		{
+			printf("\nStudent Roll No : %d ",temp->rno);
+			printf("\nStudent Name : %s ",temp->name);
+			printf("\nStudent Div : %s ",temp->div);
+			printf("\nStudent Marks : %d ",temp->marks);
+
+			temp=temp->next;
+		}
+	}
+}
+
+void searchformax()
+{
+	if(first==NULL)
+	{
+		printf("\n > Link list is empty.");
+		return;
+	}
+	else
+	{
+		int max=0,count=1,pos=1;
+
+		temp=first;
+		while(temp!=NULL)
+		{
+			if(max<temp->marks)
+			{
+				max=temp->marks;
+			}
+			temp=temp->next;
+			count++;
+		}
+		while(pos<count)
+		{
+			temp=temp->next;
+		}
+
+		printf("\nStudent Roll No : %d ",temp->rno);
+		printf("\nStudent Name : %s ",temp->name);
+		printf("\nStudent Div : %s ",temp->div);
+		printf("\nStudent Marks : %d ",temp->marks);
+
+	}
+}
+
+void delete_byrno()
+{
+//	if(first==NULL)
+//	{
+//		printf("\n > Link list is empty.");
+//	}
+//	else
+	{
+		int pos,count=1;
+		printf("\n > Enter the position : ");
+		scanf("%d",&pos);
+
+		prev=NULL;
+		curr=first;
+		while(x!=curr->rno)
+		{
+			prev=curr;
+			curr=curr->next;
+			//count++;
+		}
+		printf("\n > Deleted Roll No is : %d ",curr->rno);
+
+		if(curr==first)
+		{
+			first=first->next;
+		}
+
+		prev->next=curr->next;
+
+		if(prev->next == NULL)
+		{
+			last=prev;
+		}
+
+		free(curr);
+	}
+}
+
+int main()
+{
+	create();
+	int chh;
+	do
+	{
+		printf("\n 1: Display : ");
+		printf("\n 2: Delete by roll no : ");
+		printf("\n 3: search for max : ");
+		printf("\n 4: Exit");
+
+		printf("\n > Enter your choice : ");
+		scanf("%d",&chh);
+
+		switch(chh)
+		{
+		case 1:
+			display();
+			break;
+
+		case 2:
+			delete_byrno();
+			break;
+
+		case 3:
+			delete_byrno();
+			break;
+
+		case 4:
+			exit(0);
+			break;
+
+		default:
+			printf("\n > Invalid option !!! ");
+			break;
+		}
+	}while(chh != 10);
+	return 0;
+}
+

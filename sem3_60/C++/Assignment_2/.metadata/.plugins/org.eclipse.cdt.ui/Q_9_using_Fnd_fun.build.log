@@ -1,0 +1,15 @@
+14:13:21 **** Build of configuration Debug for project Q_9_using_Fnd_fun ****
+make all 
+Building file: ../q9.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"q9.d" -MT"q9.o" -o "q9.o" "../q9.cpp"
+Finished building: ../q9.cpp
+ 
+Building target: Q_9_using_Fnd_fun
+Invoking: GCC C++ Linker
+g++  -o "Q_9_using_Fnd_fun"  ./q9.o   
+Finished building target: Q_9_using_Fnd_fun
+ 
+
+14:13:21 Build Finished. 0 errors, 0 warnings. (took 416ms)
+

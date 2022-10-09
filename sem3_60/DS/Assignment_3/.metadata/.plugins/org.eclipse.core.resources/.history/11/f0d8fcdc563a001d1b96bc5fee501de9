@@ -1,0 +1,103 @@
+/*
+ * q6.c
+ *
+ *  Created on: 22-Sep-2022
+ *      Author: root
+ */
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+struct mix{
+	int it;
+	char ch[20];
+	struct mix* next;
+}*first,*last,*nn,*temp;
+
+struct intt{
+	int it1;
+	struct integer *next;
+}*first1,*last1,*sum,*temp1,*nn1;
+
+struct chh{
+	char ch1[20];
+	struct ch *next;
+}*first2,*last2,*nn2;
+
+void create()
+{
+	int x;
+
+	while(x!=-1)
+	{
+		nn = (struct mix*) malloc(sizeof(struct mix)) ;
+
+		printf("\n > Enter value : ");
+		scanf("%d",&nn->it);
+		printf("\n > Enter name : ");
+		scanf("%d",&nn->ch);
+		nn->next=NULL;
+
+		if(first==NULL)
+		{
+			first=last=nn;
+		}
+		else
+		{
+			last->next=nn;
+			last=nn;
+		}
+
+		printf("\n > Continue (y=0/n=-1");
+		scanf("%d",&x);
+	}
+}
+
+void sort()
+{
+	temp=first;
+
+	while(temp!=last)
+	{
+		// Separating for integer ll
+
+		nn1=(struct intt *) malloc (sizeof(struct intt));
+		nn1->it1=nn->it;
+		nn1->next = NULL;
+
+		if(first1==NULL)
+		{
+			first1=last1=nn;
+		}
+		else
+		{
+			last1->next=nn;
+			last1=nn;
+		}
+
+		// Separating for character ll
+
+		nn2=(struct intt *) malloc (sizeof(struct intt));
+		nn2->ch1=nn->ch;
+		nn2->next = NULL;
+
+		if(first2==NULL)
+		{
+			first2=last2=nn;
+		}
+		else
+		{
+			last2->next=nn;
+			last2=nn;
+		}
+
+		temp=temp->next;
+	}
+}
+
+int main()
+{
+
+	return 0;
+}

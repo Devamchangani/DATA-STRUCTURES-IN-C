@@ -1,0 +1,46 @@
+/*
+ * q6.c
+ *
+ *  Created on: 22-Sep-2022
+ *      Author: root
+ */
+
+#include<stdio.h>
+#include<stdlib.h>
+
+struct mix{
+	int it;
+	char name[20];
+	struct mix* next;
+}*first,*last;
+
+struct integer{
+	int it1;
+	struct integer *next;
+}*first1,*last1,*sum,*temp1;
+
+struct ch{
+	char name1[20];
+	struct ch *next;
+}*first2,*last2;
+
+void create()
+{
+	int x;
+
+	while(x!=-1)
+	{
+
+
+		printf("\n > Continue (y=0/n=-1");
+		scanf("%d",&x);
+	}
+}
+
+
+
+int main()
+{
+
+	return 0;
+}

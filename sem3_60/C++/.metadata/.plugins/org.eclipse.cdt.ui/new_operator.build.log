@@ -1,0 +1,15 @@
+13:43:51 **** Incremental Build of configuration Debug for project new_operator ****
+make all 
+Building file: ../new.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"new.d" -MT"new.o" -o "new.o" "../new.cpp"
+Finished building: ../new.cpp
+ 
+Building target: new_operator
+Invoking: GCC C++ Linker
+g++  -o "new_operator"  ./new.o   
+Finished building target: new_operator
+ 
+
+13:43:51 Build Finished. 0 errors, 0 warnings. (took 364ms)
+

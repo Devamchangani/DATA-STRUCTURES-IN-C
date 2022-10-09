@@ -1,0 +1,1 @@
+cons.o: ../cons.cpp

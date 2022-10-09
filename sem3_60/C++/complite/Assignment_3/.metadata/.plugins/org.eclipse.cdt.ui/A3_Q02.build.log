@@ -1,0 +1,48 @@
+12:21:34 **** Incremental Build of configuration Debug for project A3_Q02 ****
+make all 
+Building file: ../q3.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"q3.d" -MT"q3.o" -o "q3.o" "../q3.cpp"
+../q3.cpp:116:42: error: invalid use of incomplete type ‘class patient’
+  116 | class ipd_patient: public patient,public ipd
+      |                                          ^~~
+../q3.cpp:14:7: note: definition of ‘class patient’ is not complete until the closing brace
+   14 | class patient
+      |       ^~~~~~~
+../q3.cpp:182:1: error: expected ‘}’ at end of input
+  182 | }
+      | ^
+../q3.cpp:15:1: note: to match this ‘{’
+   15 | {
+      | ^
+../q3.cpp: In constructor ‘patient::patient(int, char*, int, int, int, int, int, int, int, int, int)’:
+../q3.cpp:50:4: error: a function-definition is not allowed here before ‘{’ token
+   50 |    {
+      |    ^
+../q3.cpp:77:4: error: a function-definition is not allowed here before ‘{’ token
+   77 |    {
+      |    ^
+../q3.cpp:87:4: error: a function-definition is not allowed here before ‘{’ token
+   87 |    {
+      |    ^
+../q3.cpp: In member function ‘void patient::ipd_patient::get_amt()’:
+../q3.cpp:122:9: error: invalid use of non-static data member ‘patient::days’
+  122 |   amt = days * cpd;
+      |         ^~~~
+../q3.cpp:25:6: note: declared here
+   25 |  int days;
+      |      ^~~~
+../q3.cpp: In member function ‘void patient::ipd_patient::display_ipd_patient()’:
+../q3.cpp:128:3: error: ‘display_patient’ was not declared in this scope; did you mean ‘display_ipd_patient’?
+  128 |   display_patient();
+      |   ^~~~~~~~~~~~~~~
+      |   display_ipd_patient
+../q3.cpp: At global scope:
+../q3.cpp:182:1: error: expected unqualified-id at end of input
+  182 | }
+      | ^
+make: *** [subdir.mk:20: q3.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+12:21:34 Build Failed. 9 errors, 0 warnings. (took 312ms)
+

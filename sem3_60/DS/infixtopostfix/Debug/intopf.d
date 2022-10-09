@@ -1,0 +1,1 @@
+intopf.o: ../intopf.c

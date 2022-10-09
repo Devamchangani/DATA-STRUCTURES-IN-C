@@ -1,0 +1,15 @@
+16:22:47 **** Incremental Build of configuration Debug for project operation_on_2Darr ****
+make all 
+Building file: ../op2.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"op2.d" -MT"op2.o" -o "op2.o" "../op2.c"
+Finished building: ../op2.c
+ 
+Building target: operation_on_2Darr
+Invoking: GCC C++ Linker
+g++  -o "operation_on_2Darr"  ./op2.o   
+Finished building target: operation_on_2Darr
+ 
+
+16:22:47 Build Finished. 0 errors, 0 warnings. (took 211ms)
+

@@ -1,0 +1,139 @@
+/*
+ * q3.cpp
+ *
+ *  Created on: 29-Aug-2022
+ *      Author: root
+ */
+
+///////////////////////only no of days admitted is left
+
+#include<iostream>
+
+using namespace std;
+
+class patient
+{
+public:
+	char name[15];
+	int bd,bm,by,age,fd,fm,fy,cd,cm,cy;
+	int d,m,y;		//check in date
+	int d1,m1,y1;	//checkout date
+	int days;
+
+	patient()
+	{
+		printf("\n > Enter the details of patient : ");
+		printf("\n \tEnter name : ");
+		scanf("%s",name);
+
+		printf("\n \tEnter birthdate : ");
+		scanf("%d %d %d",&bd,&bm,&by);
+
+		printf("\n \tDate of check-in :");
+		scanf("%d %d %d ",&d,&m,&y);
+
+		printf("\n \tDate of check-out :");
+		scanf("%d %d %d",&d1,&m1,&y1);
+
+		days=d1-d;
+		age=0;
+
+		cd=23;
+		cm=09;
+		cy=2022;
+	};
+
+	void count_age()
+	{
+		int month[12]={31,28,31,30,31,30,31,31,30,31,30,31};	//days in month
+
+		if((y%4==0 && y%100!= 0) || y%400==0)	//checking for leap year
+		{
+			month[1]=29;
+		}
+
+		if(d1>d)		//for diff of date
+		{
+			d=d+month[m];
+			m=m-1;
+		}
+		dd2.d=d-d1;
+
+		if(m1>m)	//for diff of month
+		{
+			m=m+1;
+			y=y-1;
+		}
+		dd2.m=m-m1;
+		dd2.y=y-y1;		//for diff of year
+
+		cout<<"\n > Date Different is : \n\t\t\t"<<dd2.d<<"days: \n\t\t\t"<<dd2.m<<"months: \n\t\t\t"<<dd2.y;
+
+		return;
+	}
+
+	void display_patient()
+	{
+		printf("\n > Details Of Patient : \n\n");
+
+		printf(" \t Name : %s \n",name);
+		printf("\t Age : %d \n",age);
+		printf(" \t Check-In Date : %d / %d / %d \n",d,m,y);
+		printf(" \t Check-Out Date : %d / %d / %d \n",d1,m1,y1);
+	}
+};
+
+class ipd
+{
+public:
+	int ward_no;
+	int bed_no;
+	float cpd;
+
+	ipd()
+	{
+		printf("\n > Enter the  details :-");
+
+		printf("\n \tward no : ");
+		scanf("%d",&ward_no);
+		printf("\n \tbed no : ");
+		scanf("%d",&bed_no);
+		printf("\n \tcharges per day : ");
+		scanf("%f",&cpd);
+	};
+
+	void display_ipd()
+	{
+		printf("\n > Details Of IPD : \n\n");
+
+		printf(" \t Ward No : %d \n",ward_no);
+		printf(" \t Bed No : %d \n",bed_no);
+		printf(" \t Charge Per Day : %f \n",cpd);
+	}
+};
+
+class ipd_patient: public patient,public ipd
+{
+public:
+	float amt;
+	void get_amt()
+	{
+		amt = days * cpd;
+	}
+
+	void display_ipd_patient()
+	{
+		display_ipd();
+		display_patient();
+		printf("\n\n\n > The total amount to pay is : %f",amt);
+	}
+};
+
+
+int main()
+{
+	ipd_patient p1;
+
+	p1.get_amt();
+	p1.display_ipd_patient();
+}

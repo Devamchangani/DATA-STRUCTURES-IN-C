@@ -1,0 +1,6 @@
+13:35:32 **** Incremental Build of configuration Debug for project array_to_class ****
+make all 
+make: Nothing to be done for 'all'.
+
+13:35:32 Build Finished. 0 errors, 0 warnings. (took 112ms)
+

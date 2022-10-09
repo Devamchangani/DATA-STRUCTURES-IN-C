@@ -1,0 +1,15 @@
+15:10:52 **** Incremental Build of configuration Debug for project A1_Q4 ****
+make all 
+Building file: ../q3.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"q3.d" -MT"q3.o" -o "q3.o" "../q3.cpp"
+Finished building: ../q3.cpp
+ 
+Building target: A1_Q4
+Invoking: GCC C++ Linker
+g++  -o "A1_Q4"  ./q3.o   
+Finished building target: A1_Q4
+ 
+
+15:10:52 Build Finished. 0 errors, 0 warnings. (took 619ms)
+

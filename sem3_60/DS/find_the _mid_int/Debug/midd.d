@@ -1,0 +1,1 @@
+midd.o: ../midd.c

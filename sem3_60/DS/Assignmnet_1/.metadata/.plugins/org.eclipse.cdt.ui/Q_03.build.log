@@ -1,0 +1,15 @@
+13:44:31 **** Build of configuration Debug for project Q_03 ****
+make all 
+Building file: ../q3.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"q3.d" -MT"q3.o" -o "q3.o" "../q3.c"
+Finished building: ../q3.c
+ 
+Building target: Q_03
+Invoking: GCC C Linker
+gcc  -o "Q_03"  ./q3.o   
+Finished building target: Q_03
+ 
+
+13:44:32 Build Finished. 0 errors, 0 warnings. (took 274ms)
+

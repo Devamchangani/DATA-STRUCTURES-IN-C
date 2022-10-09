@@ -1,0 +1,15 @@
+13:26:51 **** Incremental Build of configuration Debug for project constant ****
+make all 
+Building file: ../cons.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"cons.d" -MT"cons.o" -o "cons.o" "../cons.cpp"
+Finished building: ../cons.cpp
+ 
+Building target: constant
+Invoking: GCC C++ Linker
+g++  -o "constant"  ./cons.o   
+Finished building target: constant
+ 
+
+13:26:51 Build Finished. 0 errors, 0 warnings. (took 365ms)
+
