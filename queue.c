@@ -2,7 +2,13 @@
 #include<stdlib.h>
 
 // #include<conio.h>
-
+void enqueue();
+void dequeue();
+void traverse();
+int a[20],size,rear,choice,front;
+char ch;
+rear=-1;
+front=-1;
 
 // Insert a element in queue
 void Enqueue(int a[], int *rear, int size)
@@ -18,14 +24,14 @@ void Enqueue(int a[], int *rear, int size)
 }
 
 // Delete a element in queue
-void Dqueue(int a[], int rear, int front)
+void Dqueue(int a[], int *rear, int *front)
 {
-    if(front == rear)
+    if(*front == *rear)
         printf("Empty");
     else
     {
-        front++;
-        printf("\n%d",a[front]);
+        (*front)++;
+        printf("\n%d",a[*front]);
         printf("\nDelete successfully");
     }
 
@@ -51,11 +57,8 @@ void traverse(int a[], int rear, int front)
 
 void main()
 {
-    int a[20],size,rear,choice,front;
-    char ch;
-    rear=-1;
-    front=-1;
-
+    
+    
     // clrscr();
     
     printf("\n\nEnter the size of queue: ");
@@ -75,7 +78,7 @@ void main()
                 Enqueue(a,&rear,size);
                 break;
             case 2:
-                Dqueue(a,rear,front);
+                Dqueue(a,&rear,&front);
                 break;
             case 3:
                 traverse(a,rear,front);
