@@ -27,6 +27,7 @@ void pop(int a[], int *top)
         (*top)--;
 
     }
+    top--;
 }
 
 void traverse(int a[], int top)
