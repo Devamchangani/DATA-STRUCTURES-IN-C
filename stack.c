@@ -46,6 +46,22 @@ void traverse(int a[], int top)
     }
 }
 
+// void peep(int a[],  int top)
+// {
+//     int b;
+//     printf("Enter the index of Element \n");
+//     scanf("%d",&b);
+//     if (a[b] <= top)
+//     {
+//         printf("\n Empty");
+//     }
+//     else
+//     {
+//         printf("\n%d",a[b]);
+//     }
+
+// }
+
 void main()
 {
     int a[20],size,top,choice;
@@ -62,6 +78,7 @@ void main()
         printf("1.push\n");
         printf("2.pop\n");
         printf("3.Display\n");
+        // printf("4.peep\n");
         printf("0.exit\n");
         printf("Enter The Choice : ");
         scanf("%d",&choice);
@@ -76,6 +93,9 @@ void main()
             case 3:
                 traverse(a,top);
                 break;
+            // case 4:
+            //     peep(a,top);
+            //     break;
             case 0:
                 exit(0);
             default:
