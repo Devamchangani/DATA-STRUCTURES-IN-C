@@ -151,43 +151,78 @@ void printList(struct Node *node)
  
 /* Driver program to test above functions*/
 
-int main()
+void main()
 {
-
+   int choice,a,b,c;
+   char ch;
+   
   /* Start with the empty list */
 
   struct Node* head = NULL;
+
+//  clrscr();
+
+//   Insert 6.  So linked list becomes 6->NULL
+//   append(&head, 6); 
+//   Insert 7 at the beginning. So linked list becomes 7->6->NULL
+//   push(&head, 7);
+//   Insert 1 at the beginning. So linked list becomes 1->7->6->NULL
+//   push(&head, 1);
+//   Insert 4 at the end. So linked list becomes 1->7->6->4->NULL
+//   append(&head, 4);
+//   Insert 8, after 7. So linked list becomes 1->7->8->6->4->NULL
+//   insertAfter(head->next, 8);
+//   printf("\n Created Linked list is: ");
+//   printList(head);
  
+do{
+    printf("\n 1.push");
+    printf("\n 2.append");
+    printf("\n 3.Insert after any element");
+    printf("\n 4.display");
+    printf("\n 0.Exit\n");
+    printf("\n Enter your Choice : ");
+    scanf("%d",&choice);
+    switch (choice)
+    {
+    case 1:
+      printf("\nEnter your element : ");
+      scanf("%d",&a);
+      push(&head,a);
+      break;
+   
+   case 2:
+      printf("\nEnter your element : ");
+      scanf("%d",&b);
+      append(&head,b);
+      break;
+    
+   case 3:
+      printf("\nEnter your element : ");
+      scanf("%d",&c);
+      insertAfter(head->next,c);
+      break;
+   
+   case 4:
+      printf("\n Created Linked list is: ");
+      printList(head);
 
-  // Insert 6.  So linked list becomes 6->NULL
+   case 0: 
+      exit(0);
+   
+   default:
+      printf("\nInvalid choice");
+      break;
+   
+   }
 
-  append(&head, 6);
- 
+   printf("\n Do you wise to countinue y or n: ");
+   scanf("%s",&ch);
 
-  // Insert 7 at the beginning. So linked list becomes 7->6->NULL
+}while (ch == 'y' || ch == 'Y');
 
-  push(&head, 7);
- 
 
-  // Insert 1 at the beginning. So linked list becomes 1->7->6->NULL
 
-  push(&head, 1);
- 
 
-  // Insert 4 at the end. So linked list becomes 1->7->6->4->NULL
-
-  append(&head, 4);
- 
-
-  // Insert 8, after 7. So linked list becomes 1->7->8->6->4->NULL
-
-  insertAfter(head->next, 8);
- 
-
-  printf("\n Created Linked list is: ");
-
-  printList(head);
- 
-
-  return 0;
+   getch();
 }
