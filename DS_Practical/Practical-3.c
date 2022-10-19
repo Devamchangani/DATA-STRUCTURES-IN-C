@@ -1,5 +1,16 @@
+/*   Practicl - 3
+Stack Operations. 
+
+Implement a program for
+stack that performs following operations using array:
+
+(a) PUSH (b) POP (c) PEEP (d) CHANGE (e) DISPLAY
+*/
+
+
+
 #include<stdio.h>
-#include<conio.h>
+#include<stdlib.h>
 
 void push(int a[], int *top, int size)
 {
@@ -53,7 +64,7 @@ void peep(int a[],  int top)
     scanf("%d",&b);
     if (a[b] <= top)
     {
-        printf("\n Empty");
+        printf("\n Not found");
     }
     else
     {
@@ -62,7 +73,33 @@ void peep(int a[],  int top)
 
 }
 
-void main()
+void change(int a[], int top ,int size)
+{
+    int c,b,i;
+    printf("Enter the index of Element \n");
+    scanf("%d",&b);
+    printf("Enter the new  Element \n");
+    scanf("%d",&c);
+    if (a[b] <= top)
+    {
+        printf("\n Not found");
+    }
+    else
+    {
+        for(i=0;i<size;i++)
+        {
+            if(i==b)
+            {
+                a[i]=c;
+            }
+        }
+        printf("Successfully Change element ");
+    }
+
+}
+
+
+int main()
 {
     int a[20],size,top,choice;
     char ch;
@@ -79,6 +116,7 @@ void main()
         printf("2.pop\n");
         printf("3.Display\n");
         printf("4.peep\n");
+        printf("5.Change\n");
         printf("0.exit\n");
         printf("Enter The Choice : ");
         scanf("%d",&choice);
@@ -96,6 +134,9 @@ void main()
             case 4:
                 peep(a,top);
                 break;
+            case 5:
+                change(a,top,size);
+                break;
             case 0:
                 exit(0);
             default:
@@ -103,13 +144,13 @@ void main()
 
         }
 
-        printf("\n Do you wise to countinue y or n: ");
+        printf("\n Do you wise to continue y or n: ");
         scanf("%s",&ch);
         // ch=getch();
     }while(ch == 'y' || ch == 'Y');
     
     
-    getch();
+    return 0;
     
 
 
