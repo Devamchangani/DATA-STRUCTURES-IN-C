@@ -1,9 +1,0 @@
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Q_3,org.eclipse.launchbar.core.descriptorType.default\:Q_5,org.eclipse.launchbar.core.descriptorType.default\:Q_8,org.eclipse.launchbar.core.descriptorType.default\:Q_7,org.eclipse.launchbar.core.descriptorType.default\:Q_9,org.eclipse.launchbar.core.descriptorType.default\:Q_9_using_mem_fun,org.eclipse.launchbar.core.descriptorType.default\:Q2_10,org.eclipse.launchbar.core.descriptorType.default\:Q2_12,org.eclipse.launchbar.core.descriptorType.default\:Q2_13,org.eclipse.launchbar.core.descriptorType.default\:Q2_11,org.eclipse.launchbar.core.descriptorType.default\:Q_1,org.eclipse.launchbar.core.descriptorType.default\:Q_2,org.eclipse.launchbar.core.descriptorType.default\:Q_3 (1)
-eclipse.preferences.version=1
-org.eclipse.launchbar.core.descriptorType.default\:Q_1/activeLaunchMode=run
-org.eclipse.launchbar.core.descriptorType.default\:Q_1/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
-org.eclipse.launchbar.core.descriptorType.default\:Q_2/activeLaunchMode=run
-org.eclipse.launchbar.core.descriptorType.default\:Q_2/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;find_the _mid_int/mid.c&apos;" deleteContents="false" description="Delete resource &apos;find_the _mid_int/mid.c&apos;" element1="/find_the _mid_int/mid.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1657176506125"/>
-</session>

@@ -1,1 +1,0 @@
-iftopf.o: ../iftopf.c

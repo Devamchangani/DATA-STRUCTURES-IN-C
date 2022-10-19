@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;operations_on_1Darr&apos; to &apos;operation_on_2Darr&apos;" description="Rename resource &apos;operations_on_1Darr&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/operations_on_1Darr" name="operation_on_2Darr" stamp="1657620858311" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;push&amp;pop&apos; to &apos;stack&apos;" description="Rename resource &apos;push&amp;pop&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/push&amp;pop" name="stack" stamp="1657878116267" updateReferences="true"/>
-</session>

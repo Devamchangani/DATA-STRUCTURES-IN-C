@@ -1,1 +1,0 @@
-struct.o: ../struct.c
