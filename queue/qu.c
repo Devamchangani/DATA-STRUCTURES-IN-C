@@ -1,3 +1,5 @@
+// FIFO
+
 #include <stdio.h>
 # define SIZE 100
 void enqueue();

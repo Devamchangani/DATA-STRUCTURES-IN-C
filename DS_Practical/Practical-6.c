@@ -1,4 +1,11 @@
-// FIFO
+/*   Practicl - 6
+Circular Queue Operations. 
+
+Write a program to
+implement Circular QUEUE using array that performs following operations :
+
+(a) INSERT (b) DELETE (c) DISPLAY
+*/
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -9,8 +16,10 @@ void dequeue();
 void traverse();
 int a[20],size,rear,choice,front;
 char ch;
+
 rear=-1;
 front=-1;
+
 
 // Insert a element in queue
 void Enqueue(int a[], int *rear, int size)
@@ -57,7 +66,7 @@ void traverse(int a[], int rear, int front)
 }
 
 
-void main()
+int main()
 {
     
     
@@ -98,7 +107,8 @@ void main()
     }while(ch == 'y' || ch == 'Y');
     
     
-    getch();
+    // getch();
+    return 0;
     
 
 

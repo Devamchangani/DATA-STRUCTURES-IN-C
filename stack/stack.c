@@ -1,3 +1,5 @@
+// LIFO
+
 #include<stdio.h>
 #include<conio.h>
 
