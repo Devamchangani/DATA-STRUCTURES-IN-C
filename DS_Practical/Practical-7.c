@@ -106,6 +106,8 @@ struct Node* delete_at_first(struct Node* head)
 //     return head;
 // }
 
+
+
 // // delete before spacific node
 // struct Node* delete_before_node(struct Node* head ,struct Node* prevNode)
 // {

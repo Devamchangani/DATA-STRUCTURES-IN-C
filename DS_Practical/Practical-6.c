@@ -14,7 +14,7 @@ implement Circular QUEUE using array that performs following operations :
 void enqueue();
 void dequeue();
 void traverse();
-int a[20],size,rear,choice,front;
+int a[20],size,rear,choice,front,s;
 char ch;
 
 rear=-1;
@@ -22,7 +22,7 @@ front=-1;
 
 
 // Insert a element in queue
-void Enqueue(int a[], int *rear, int size)
+void Enqueue(int a[], int *rear,int *front, int size)
 {
     if(*rear==size-1)
         printf("Overflow");
@@ -37,14 +37,19 @@ void Enqueue(int a[], int *rear, int size)
 // Delete a element in queue
 void Dqueue(int a[], int *rear, int *front)
 {
+    
     if(*front == *rear)
         printf("Empty");
+        
     else
     {
         (*front)++;
         printf("\n%d",a[*front]);
         printf("\nDelete successfully");
+        
+        
     }
+
 
 }
 
@@ -55,6 +60,7 @@ void traverse(int a[], int rear, int front)
     if(rear == front)
     {
         printf("\nEmpty\n");
+        
     }
     else 
     {
@@ -73,7 +79,8 @@ int main()
     // clrscr();
     
     printf("\n\nEnter the size of queue: ");
-    scanf("%d",&size);
+    scanf("%d",&s);
+    size = s;
 
     do{
         printf("******************  Main Menu  ******************\n");
@@ -86,10 +93,14 @@ int main()
         switch (choice)
         {
             case 1:
-                Enqueue(a,&rear,size);
+                Enqueue(a,&rear,&front,size);
                 break;
             case 2:
                 Dqueue(a,&rear,&front);
+                // if(front == rear)
+                //     size = size + 1;
+                // else
+                //     size = size + 1;
                 break;
             case 3:
                 traverse(a,rear,front);
