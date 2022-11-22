@@ -83,6 +83,19 @@ struct Node* insert_at_end(struct Node* head, int data)
     
 }
 
+
+// struct Node* insert_at_ascending_order(struct Node* head, int data)
+// {
+//     struct Node* ptr = (struct Node*) malloc(sizeof(struct Node));
+//     struct Node* p = head;
+//     while (p -> next != NULL)
+//     {
+        
+//     }
+    
+// }
+
+
 // delete at first
 struct Node* delete_at_first(struct Node* head)
 {
