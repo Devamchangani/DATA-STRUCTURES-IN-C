@@ -1,3 +1,8 @@
+/*
+Write a program to implement QUEUE using Linked List.
+*/
+
+
 #include<stdio.h>
 #include<stdlib.h>
 

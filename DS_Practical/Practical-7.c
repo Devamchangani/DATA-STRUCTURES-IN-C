@@ -108,44 +108,67 @@ struct Node* delete_at_first(struct Node* head)
     return head;
 }
 
-// // delete after spacific node
-// struct Node* delete_after_node(struct Node* head ,struct Node* prevNode)
-// {
-//     struct Node* p = prevNode -> next;
+// delete after spacific node
+struct Node* delete_after_node(struct Node* head)
+{
+    int n;
+    int i = 0;
 
-//     prevNode -> next = p -> next;
-//     free(p);
-    
-//     return head;
-// }
+    printf("Enter The index : ");
+    scanf("%d",&n);
+    struct Node* p = head;
+    struct Node* q = head;
 
+    while (i != n)
+    {
+        p = p -> next;
+        i++;
+    }
 
+    while (q -> next != p)
+    {
+        q = q -> next;
+    }
 
-// // delete before spacific node
-// struct Node* delete_before_node(struct Node* head ,struct Node* prevNode)
-// {
-//     struct Node* p = head;
-//     struct Node* q = head;
-//     int i = 0;
-//     int j = 0;
-//     while (i != prevNode)
-//     {
-//         q = q -> next;
-//         i++;
-//     }
-
-//     while (j != i)
-//     {
-//         p = p -> next;
-//         j++;
-//     }
     
     
-//     p -> next = q -> next;
-//     free(q);
+    q -> next = p -> next;
+    printf("Deleted element is :   %d ", p -> data);
+    free(p);
     
-//     return head;
-// }
+    return head;
+}
+
+
+
+
+struct Node* delete_before_node(struct Node* head)
+{
+    int n;
+    int i=1;
+    struct Node* p = head;
+    struct Node* q = head;
+
+    printf("Enter The index : ");
+    scanf("%d",&n);
+
+    while (i != n-1)
+    {
+        p = p->next;
+        i++;        
+    }
+
+    while (q -> next != p)
+    {
+        q = q->next;        
+    }
+
+    
+    q -> next = p ->next;
+    printf("Deleted element is :   %d ", p -> data);
+    free(p);
+    
+}
 
 
 // Display Linkedlist 
@@ -153,7 +176,7 @@ void LinkedlistTravese(struct Node* ptr)
 {
     while (ptr != NULL)
     {
-        printf("Element is : %d ", ptr -> data);
+        printf("%d ", ptr -> data);
         ptr = ptr -> next;
     }
     
@@ -200,10 +223,10 @@ int main()
                 head = delete_at_first(head);
                 break;
             case 5:
-                // delete_after_node(head,);
+                delete_after_node(head);
                 break;
             case 6:
-                // delete_before_node(head);
+                delete_before_node(head);
                 break;
             case 7:
                 LinkedlistTravese(head);
