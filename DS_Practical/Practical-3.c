@@ -104,6 +104,7 @@ int main()
     int a[20],size,top,choice;
     char ch;
     top=-1;
+    
 
     // clrscr();
     
