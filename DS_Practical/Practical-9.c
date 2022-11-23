@@ -111,7 +111,7 @@ int main()
 
         }
 
-        printf("\n Do you wise to countinue y or n: ");
+        printf("\n Do you wise to continue y or n: ");
         scanf("%s",&ch);
         // ch=getch();
     }while(ch == 'y' || ch == 'Y');
