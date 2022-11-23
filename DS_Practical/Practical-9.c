@@ -11,7 +11,7 @@ struct Node
 
 
 // insert node
-struct Node* insert_node(struct Node* head, int data)
+struct Node* enqueue(struct Node* head, int data)
 {
     if( head == NULL)
     {
@@ -41,7 +41,7 @@ struct Node* insert_node(struct Node* head, int data)
 };
 
 
-struct Node* pop(struct Node* head)
+struct Node* dequeue(struct Node* head)
 {
     struct Node* ptr = head;
 
@@ -80,8 +80,8 @@ int main()
 
     do{
         printf("******************  Main Menu  ******************\n");
-        printf("1.insert\n");
-        printf("2.pop\n");
+        printf("1.enqueue\n");
+        printf("2.dequeue\n");
         printf("3.Display\n");
         printf("0.exit\n");
         
@@ -92,10 +92,10 @@ int main()
             case 1:
                 printf("enter element: ");
                 scanf("%d",&n);
-                head = insert_node(head,n);
+                head = enqueue(head,n);
                 break;
             case 2:
-                head = pop(head);
+                head = dequeue(head);
             case 3:
                 LinkedlistTravese(head);
                 break;

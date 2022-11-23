@@ -1,4 +1,5 @@
-
+/*Write a program to
+implement stack using Linked List*/
 
 
 #include<stdio.h>
