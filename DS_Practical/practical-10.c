@@ -62,6 +62,8 @@ struct Node* insert_at_first(struct Node* head, int data)
 // Insert at the End
 struct Node* insert_at_end(struct Node* head, int data)
 {
+    // insert_node(head,data);
+
     struct Node* ptr = (struct Node*) malloc(sizeof(struct Node));
     struct Node* p = head;
 
@@ -100,7 +102,7 @@ struct Node* delete_before_position(struct Node* head)
     int n;
     int i=1;
     struct Node* p = head;
-    struct Node* q = head;
+    // struct Node* q = head;
 
     printf("Enter The index : ");
     scanf("%d",&n);
@@ -111,12 +113,15 @@ struct Node* delete_before_position(struct Node* head)
         i++;        
     }
 
-    while (q -> next != p)
-    {
-        q = q->next;        
-    }
+    // while (q -> next != p)
+    // {
+    //     q = q->next;        
+    // }
 
-    q -> next = p -> next;
+    // q -> next = p -> next;
+    // p -> next -> back = p -> back;
+
+    p -> back -> next = p -> next;
     p -> next -> back = p -> back;
 
     printf("Deleted element is :   %d ", p -> data);

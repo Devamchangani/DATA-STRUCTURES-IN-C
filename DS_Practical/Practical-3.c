@@ -9,7 +9,7 @@ stack that performs following operations using array:
 
 
 
-#include<stdio.h>
+#include<stdio.h>  
 #include<stdlib.h>
 
 void push(int a[], int *top, int size)
