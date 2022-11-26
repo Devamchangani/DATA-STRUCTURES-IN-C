@@ -3,6 +3,7 @@
 
 //  Create a node
 
+
 struct Node
 {
     int data;
