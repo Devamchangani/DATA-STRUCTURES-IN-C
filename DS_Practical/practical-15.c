@@ -1,6 +1,7 @@
 // Write a program to implement Merge Sort
 
 
+#include<stdio.h>
 
 void merge(int a[], int mid, int low, int high)
 {
