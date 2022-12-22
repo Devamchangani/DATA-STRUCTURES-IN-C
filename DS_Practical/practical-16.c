@@ -20,6 +20,7 @@ void bubblesort(int a[], int n)
     }
 }
 
+
 void printarray(int a[], int n)
 {
     for(int i = 0; i<n; i++)
