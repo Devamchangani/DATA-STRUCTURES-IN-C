@@ -83,7 +83,6 @@ int main()
     {
         scanf("%d", &a[i]);
     }
-    int mid = n/2;
 
     printf("Unsorted array: \n");
     printarray(a,n);
