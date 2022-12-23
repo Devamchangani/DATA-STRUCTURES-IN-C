@@ -18,7 +18,7 @@ struct Tree* tree(int data)
     struct Tree *newnode , *par, *ptr;
 
 
-    // par use for link
+    // par use for link a node
     // ptr use for find place
 
     ptr = root;
@@ -64,64 +64,63 @@ struct Tree* tree(int data)
 }
 
 
-// void traverse()
-// {
-
-//     struct Tree *current, *pre;
-
-
-//     if(root == NULL)
-//     {
-//         return;
-//     }
-
-//     current = root;
-
-//     while(current != NULL)
-//     {
-//         if(current -> left == NULL)
-//         {
-//             printf("%d", current -> data);
-//             current = current -> right;
-//         }
-//         else
-//         {
-//             pre = current -> left;
-//             while (pre -> right != NULL && pre -> right != current)
-//             {
-//                 pre = pre -> right;
-//             }
-
-//             if(pre -> right == NULL)
-//             {
-//                 pre -> right = current;
-//                 current = current -> left;
-//             }
-//             else
-//             {
-//                 pre -> right = NULL;
-//                 printf("%d", current -> data);
-//                 current = current -> right;
-//             }
-//         }
-//     }
-    
-    
-// }
-
-
 void traverse()
 {
 
-		if(root != NULL)
-		{
-			printf("\t%d", root -> data);
-			traverse(root -> left);
-			traverse(root -> right);
+    struct Tree *current, *pre;
 
-		}
 
+    if(root == NULL)
+    {
+        return;
+    }
+
+    current = root;
+
+    while(current != NULL)
+    {
+        if(current -> left == NULL)
+        {
+            printf("%d", current -> data);
+            current = current -> right;
+        }
+        else
+        {
+            pre = current -> left;
+            while (pre -> right != NULL && pre -> right != current)
+            {
+                pre = pre -> right;
+            }
+
+            if(pre -> right == NULL)
+            {
+                pre -> right = current;
+                current = current -> left;
+            }
+            else
+            {
+                pre -> right = NULL;
+                printf("%d", current -> data);
+                current = current -> right;
+            }
+        }
+    }
+    
 }
+
+
+// void traverse()
+// {
+
+// 		if(root != NULL)
+// 		{
+// 			printf("\t%d", root -> data);
+// 			traverse(root -> left);
+// 			traverse(root -> right);
+
+// 		}
+
+// }
 
 int main()
 {
