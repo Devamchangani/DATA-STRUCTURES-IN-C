@@ -9,11 +9,11 @@ struct Tree
     int data;
     struct Tree *left;
     struct Tree *right;
-};
+}*root = NULL;
 
 
 
-struct Tree* tree(int data, struct Tree* root)
+struct Tree* tree(int data)
 {
     struct Tree *newnode , *par, *ptr;
 
@@ -64,68 +64,71 @@ struct Tree* tree(int data, struct Tree* root)
 }
 
 
-void traverse(struct Tree *root)
-{
-
-    struct Tree *current, *pre;
-
-    if(root == NULL)
-    {
-        return;
-    }
-
-    current = root;
-
-    while(current != NULL)
-    {
-        if(current -> left == NULL)
-        {
-            printf("%d", current -> data);
-            current = current -> right;
-        }
-        else
-        {
-            pre = current -> left;
-            while (pre -> right != NULL && pre -> right != current)
-            {
-                pre = pre -> right;
-            }
-
-            if(pre -> right == NULL)
-            {
-                pre -> right = current;
-                current = current -> left;
-            }
-            else
-            {
-                pre -> right = NULL;
-                printf("%d", current -> data);
-                current = current -> right;
-            }
-        }
-    }
-}
-
-
-// void traverse(struct Tree *root)
+// void traverse()
 // {
 
-// 		if(root != NULL)
-// 		{
-// 			printf("\t%d", root -> data);
-// 			traverse(root -> left);
-// 			traverse(root -> right);
+//     struct Tree *current, *pre;
 
-// 		}
 
+//     if(root == NULL)
+//     {
+//         return;
+//     }
+
+//     current = root;
+
+//     while(current != NULL)
+//     {
+//         if(current -> left == NULL)
+//         {
+//             printf("%d", current -> data);
+//             current = current -> right;
+//         }
+//         else
+//         {
+//             pre = current -> left;
+//             while (pre -> right != NULL && pre -> right != current)
+//             {
+//                 pre = pre -> right;
+//             }
+
+//             if(pre -> right == NULL)
+//             {
+//                 pre -> right = current;
+//                 current = current -> left;
+//             }
+//             else
+//             {
+//                 pre -> right = NULL;
+//                 printf("%d", current -> data);
+//                 current = current -> right;
+//             }
+//         }
+//     }
+    
+    
 // }
+
+
+void traverse()
+{
+
+		if(root != NULL)
+		{
+			printf("\t%d", root -> data);
+			traverse(root -> left);
+			traverse(root -> right);
+
+		}
+
+}
 
 int main()
 {
     int n;
     int choice;
     char ch;
-    struct Tree *root = NULL;
+    // struct Tree *root = NULL;
 
     do{
         printf("\n");
@@ -143,10 +146,10 @@ int main()
         case 1:
             printf("\nEnter the key to be inserted : ");
             scanf("%d", &n);
-            root = tree(n, root);
+            root = tree(n);
             break;
         case 2:
-				traverse(root);
+				traverse();
 				break;
 		// case 3:
 		// 		postorder(root);
@@ -157,7 +160,7 @@ int main()
         
 
         case 5:
-            exit(1);
+            exit(0);
 
         default:
             printf("\nWrong choice\n");
