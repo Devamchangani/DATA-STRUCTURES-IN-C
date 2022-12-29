@@ -179,11 +179,6 @@ void LinkedlistTravese(struct Node* head)
 
     
         struct Node* ptr = head;
-        // while (ptr -> next != head)
-        // {
-        //     printf("%d ", ptr -> data);
-        //     ptr = ptr -> next;
-        // }
         do
         {
             printf("%d ", ptr -> data);
@@ -192,6 +187,7 @@ void LinkedlistTravese(struct Node* head)
         }while(ptr  != head);
     }
 }
+
 
 
 
