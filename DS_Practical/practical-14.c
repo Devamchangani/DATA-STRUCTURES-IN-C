@@ -57,7 +57,6 @@ void printarray(int *a, int n)
     }
     printf("\n");
 }
-
 int main()
 {
     int a[100];

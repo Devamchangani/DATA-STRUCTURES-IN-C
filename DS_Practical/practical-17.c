@@ -35,7 +35,6 @@ int binarysearch(int a[], int size, int element)
         {
             return mid;
         }
-
         if(a[mid]< element)
         {
             low = mid + 1;
